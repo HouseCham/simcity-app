@@ -1,6 +1,6 @@
 "use client";
+import { Scene } from "@/three/Scene";
 import { Component } from "react";
-import { Scene } from "@/components/layout/Scene";
 
 export default class HomeComponent extends Component {
     componentDidMount(): void {
