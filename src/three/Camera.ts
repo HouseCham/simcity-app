@@ -6,8 +6,8 @@ import { PerspectiveCamera, Vector3 } from "three";
 export class Camera extends PerspectiveCamera {
     // Constants for camera movement and rotation
     private readonly DEGREE_TO_RADIAN: number = Math.PI / 180;
-    private readonly MIN_CAMERA_RADIUS: number = 1;
-    private readonly MAX_CAMERA_RADIUS: number = 10;
+    private readonly MIN_CAMERA_RADIUS: number = 10;
+    private readonly MAX_CAMERA_RADIUS: number = 20;
     private readonly Y_AXIS: Vector3 = new Vector3(0, 1, 0);
     private readonly ROTATION_SENSITIVITY: number = 0.5;
     private readonly ZOOM_SENSITIVITY: number = 0.02;
@@ -16,7 +16,7 @@ export class Camera extends PerspectiveCamera {
     private readonly MAX_CAMERA_ELEVATION: number = 90;
 
     private cameraOrigin: Vector3 = new Vector3();
-    private cameraRadius: number = 4;
+    private cameraRadius: number = (this.MIN_CAMERA_RADIUS + this.MAX_CAMERA_RADIUS) / 2;
     private cameraAzimuth: number = 0;
     private cameraElevation: number = 0;
     /**

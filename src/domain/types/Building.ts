@@ -1,0 +1,1 @@
+export type Building = "building-1" | "building-2" | "building-3";
